@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css?family=Amethysta"); 
+* {
+    box-sizing: border-box;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-family: 'Amethysta';
+    transition-duration: 500ms;
+    
+}
+@media screen and (orientation: portrait) {
+    .content {
+        font-size: 10px;
+    }
+    .details {
+        font-size: 2.2vh !important;
+    }
+    .head {
+        height: 100vh !important;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.head {
+    padding: 10px;
+    padding-bottom: 40px !important;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(72deg, rgba(0,224,131,1) 0%, rgba(0,193,174,1) 50%, rgba(0,138,255,1) 100%);
+    background-repeat: no-repeat;
+    background-size: auto ;
+    background-position: center;
+}
+
+.fieldbox {
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 2vh;
+    justify-content: space-between;
+}
+
+.content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.details {
+    font-size: 3vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background: linear-gradient(72deg, rgba(0,224,131,1) 0%, rgba(0,193,174,1) 50%, rgba(0,138,255,1) 100%);
+}
+
+.login_field {
+    display:flex;
+    justify-content: space-around;
+}
+
+.login_page {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+}
+
+.login {
+    margin-top: 2vh;
+    color: white !important;
+    background-color:blue !important;
+    text-align: center !important;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    border: 2px solid black;
+    width: fit-content;
+    font-size: 2vh;
+}
+
+.login:hover {
+    color: white !important;
+    animation: glow 200ms ease-in-out infinite alternate;
+    text-decoration: solid;
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+
+.logout {
+    display: block;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    padding: 8px 20px;
+    font-size: 2vh;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.logout:hover {
+    background-color: rgb(255, 130, 46);
+}
+
+form > div {
+    margin-top: 20px;
+}
+
+input {
+    width: fit-content;
+    height: 5vh;
+    border-radius: 1vw;
+    transform: scale(1);
+}
+
+input:hover, input:active{
+    z-index: 1;
+    transform: scale(1.2);
+}
+
+option {
+    text-align: center;
+    width: auto ;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+.error {
+    display: block;
+    text-align: center;
+    color: red;
+}
+
+.success {
+    display: block;
+    padding: 35vh;
+    height: 100vh;
+    font-size: 5vh;
+    color: white;
+}
+
+button {
+    background-color: red;
+    color: black;
+    display: flexbox;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 20px;
+    font-size: 2vh;
+    border-radius: 10px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: indianred;
+}
