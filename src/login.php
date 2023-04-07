@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="../style/mystyle.css">
     <title>Login Page</title>
 </head>
-<body class="head">
+<body class="head" style="height: 100vh;">
     <?php
         if($_SERVER["REQUEST_METHOD"] == "POST") {
-            include "partials/_dbconnect.php";
+            include "../database_creds/_dbconnect.php";
             $email = $_POST["email"];
             $password = $_POST["password"];
             $login_sql = "SELECT `email` AND `password` FROM `users_database`

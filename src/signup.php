@@ -8,10 +8,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="../style/mystyle.css">
     <title>SignUp Page</title>
     <?php 
-        include "partials/_dbconnect.php";
+        include "../database_creds/_dbconnect.php";
         $chksql = "SELECT `sno`, `email` AND `phone` AND `username` FROM `$db_name`";
         $result = mysqli_query($conn, $chksql);
         $row = $result->fetch_assoc();

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="../style/mystyle.css">
   <title>Home Page</title>
 </head>
 <body>
@@ -13,8 +13,7 @@
       <?php
         session_start();
         if (isset(($_SESSION['email']))) {
-          include "partials/_dbconnect.php";
-          // $email = $_SESSION('email');
+          include "../database_creds/_dbconnect.php";
           $sql = "SELECT * FROM `users_database`"; //fetching every coloumn from database
           $result = mysqli_query($conn, $sql);
           $row = $result->fetch_assoc();
@@ -27,28 +26,21 @@
                     $password = $_COOKIE['password'];
                   }
                   else {
-                    echo '<script>window.alert("Please accept cookies, it is to valid the session."</script>';
+                    echo '<script>window.alert("Please accept cookies, it is to validate the session."</script>';
                   };
                   $_SESSION['email'] = $email;
-                  // Whatever it is, put it here
-                  // echo "<div class='success'>
-                  // <b>Hello</b> <i>" . $row['fname'] . $row['lname'] . 
-                  // ",<br></i> <b>Your Email:</b>   <i>" . $email . 
-                  // "<br> </i><b>Your Username:</b> <i>" . $row['username'] . 
-                  // "<br> </i><b>with Phone No. </b><i>" . $row['phone']. 
-                  // "<br></i>& <b>Date of Birth</b> <i>" . $row['dob'] . "</i></div>";
                   mysqli_close($conn);
               }
               else {
-                header("Location: index.php");
+                header("Location: ../index.php");
               } 
             }
             else {
-              header("Location: index.php");
+              header("Location: ../index.php");
             }
           }
           else {
-            header("Location: index.php");
+            header("Location: ../index.php");
           }
         }
         else {

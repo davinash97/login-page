@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="style/mystyle.css">
     <title>Home Page</title>
 </head>
 <body>
@@ -13,14 +13,14 @@
         session_start();
         if ((isset($_COOKIE['email'])) || (isset($_SESSION['email']))) {
             if ($_SESSION['loggedin'] == True){
-                header('Location: home.php');
+                header('Location: src/home.php');
             }
             else {
-                header('Location: login.php');
+                header('Location: src/login.php');
             }
         }
         else {
-            header('Location: signup.php');
+            header('Location: src/signup.php');
         };
     ?>
 </body>
