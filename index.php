@@ -23,5 +23,6 @@
             header('Location: src/signup.php');
         };
     ?>
+    </div>
 </body>
 </html>
