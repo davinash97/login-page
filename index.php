@@ -10,18 +10,24 @@
 <body>
     <div class="content">
     <?php
-        session_start();
-        if ((isset($_COOKIE['email'])) || (isset($_SESSION['email']))) {
-            if ($_SESSION['loggedin'] == True){
-                header('Location: src/home.php');
+        try {
+            header("location: setup.php");
+        } catch(Exception $e) {
+            echo "Message: $e";
+        } finally {
+            session_start();
+            if ((isset($_COOKIE['email'])) || (isset($_SESSION['email']))) {
+                if ($_SESSION['loggedin'] == True){
+                    header('Location: src/home.php');
+                }
+                else {
+                    header('Location: src/login.php');
+                }
             }
             else {
-                header('Location: src/login.php');
-            }
+                header('Location: src/signup.php');
+            };
         }
-        else {
-            header('Location: src/signup.php');
-        };
     ?>
     </div>
 </body>

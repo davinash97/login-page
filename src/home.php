@@ -12,14 +12,14 @@
     <div>
       <?php
         session_start();
-        if (isset(($_SESSION['email']))) {
+        if (isset($_SESSION['email'])) {
           include "../database_creds/_dbconnect.php";
           $sql = "SELECT * FROM `users_database`"; //fetching every coloumn from database
           $result = mysqli_query($conn, $sql);
           $row = $result->fetch_assoc();
           $email = $_SESSION['email'];
           if ($email == $row['email']){
-            if (isset(($_SESSION['password']))) {
+            if (isset($_SESSION['password'])) {
               if ($_SESSION['password'] == $row['password']) {
                   if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
                     $email = $_COOKIE['email'];
